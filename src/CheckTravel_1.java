@@ -5,33 +5,26 @@ public class CheckTravel_1 {
         //Írjuk le az alábbi utazási biztosítással kapcsolatos relációkat helyes szintaktikával!
         //Változó nevek tetszőlegesen választhatók.
 
-
         boolean aloneTravel = true;
         boolean business = true;
         boolean europeCountry = true;
         boolean firstResult = checkingFirstAnswer(aloneTravel, business, europeCountry);
-
-
 
         boolean sportGoal = true;
         int age = 18;
         boolean injured = false;
         boolean secondResult = checkingSecondAnswer(sportGoal, age, injured);
 
-
         boolean abroadBootCamp = true;
         boolean thirdResult = checkingThirdAnswer(aloneTravel, abroadBootCamp);
-
 
         int parents = 2;
         int children = 2;
         boolean beachParty = true;
         boolean fourthResult = checkingFourthAnswer(parents, children, beachParty, injured);
 
-
         boolean cityVisit = true;
         boolean fifthResult = checkingFifthAnswer(cityVisit, europeCountry, injured);
-
     }
 
     //Igaz, ha egyedül utazik és üzleti úton vesz részt és európai országba utazik
@@ -41,9 +34,7 @@ public class CheckTravel_1 {
 
     //akkor is igaz, ha sportolási céllal utazik, legalább 18 éves és még nem volt balesete
     private static boolean checkingSecondAnswer(boolean isItSportGoal, int age, boolean hadInjury) {
-
         return isItSportGoal && age >= 18 && !hadInjury;
-
     }
 
     //Igaz, ha egyedül utazik és külföldi tanulmányúton vesz részt
@@ -60,5 +51,4 @@ public class CheckTravel_1 {
     private static boolean checkingFifthAnswer(boolean cityVisit, boolean isInEuropeCountry, boolean hadInjury) {
         return (cityVisit && isInEuropeCountry) || (!isInEuropeCountry && !hadInjury);
     }
-
 }
