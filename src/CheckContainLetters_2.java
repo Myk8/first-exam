@@ -13,7 +13,6 @@ public class CheckContainLetters_2 {
         //Segítség: egy String-et a toCharArray() metódussal bonthatunk karakterek tömbjére.
         char[] array = word.toCharArray();
 
-
         int result = a_IndexSearch(array);
         if (result == -1) {
             System.out.println("Element not found in the array");
@@ -50,7 +49,8 @@ public class CheckContainLetters_2 {
     //Bővítsük úgy a megoldást, hogy kiírja az első ’a’-t tartalmazó elem pozícióját (nem biztos, hogy van ilyen elem)!
     private static int a_IndexSearch(char[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == 'a' || array[i] == 'A') {
+            char letter = array[i];
+            if (letter == 'a' || letter == 'A') {
                 return i;
             }
         }
